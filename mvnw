@@ -50,6 +50,8 @@ if [ -z "$MAVEN_SKIP_RC" ] ; then
 
 fi
 
+DEFAULT_JDK21_HOME="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home"
+
 # OS specific support.  $var _must_ be set to either true or false.
 cygwin=false;
 darwin=false;
@@ -63,8 +65,15 @@ case "`uname`" in
     if [ -z "$JAVA_HOME" ]; then
       if [ -x "/usr/libexec/java_home" ]; then
         export JAVA_HOME="`/usr/libexec/java_home`"
+        if [ -z "$JAVA_HOME" ] && [ -d "$DEFAULT_JDK21_HOME" ]; then
+          export JAVA_HOME="$DEFAULT_JDK21_HOME"
+        fi
       else
-        export JAVA_HOME="/Library/Java/Home"
+        if [ -d "$DEFAULT_JDK21_HOME" ]; then
+          export JAVA_HOME="$DEFAULT_JDK21_HOME"
+        else
+          export JAVA_HOME="/Library/Java/Home"
+        fi
       fi
     fi
     ;;
