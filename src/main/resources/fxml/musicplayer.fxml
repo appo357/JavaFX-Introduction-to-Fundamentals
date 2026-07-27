@@ -1,8 +1,4 @@
-<?xml version="1.0"
-encoding="UTF-8"?>
-<?import
-javafx.scene.layout.StackPane?>
-<StackPane
-xmlns="http://javafx.com/javafx"
-10. 11. xmlns:fx="http://javafx.com/fxml">
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<StackPane prefHeight="421.0" prefWidth="418.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.MusicPlayerController">
 </StackPane>
